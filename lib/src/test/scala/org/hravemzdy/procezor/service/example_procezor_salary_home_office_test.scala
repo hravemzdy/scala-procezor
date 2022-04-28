@@ -34,7 +34,7 @@ class ServiceProcezorExampleWithSalaryHomeOfficeTest extends AnyFunSpec {
                 ConceptCode.get(ExampleConceptConst.CONCEPT_AMOUNT_BASIS.id)),
             new ExampleTermTarget(montCode, contract, position, variant1,
                 ArticleCode.get(ExampleArticleConst.ARTICLE_ALLOWCE_HOFFICE.id),
-                ConceptCode.get(ExampleConceptConst.CONCEPT_AMOUNT_FIXED.id)),
+                ConceptCode.get(ExampleConceptConst.CONCEPT_AMOUNT_FIXED.id))
         )
         targets
     }
@@ -78,13 +78,13 @@ class ServiceProcezorExampleWithSalaryHomeOfficeTest extends AnyFunSpec {
                 case Right(value) => {
                     val articleSymbol = value.articleDescr()
                     val conceptSymbol = value.conceptDescr()
-                    println(s"Index: $index, ART: $articleSymbol, CON: $conceptSymbol")
+                    println(s"Index: $index, CODE: ${value.article.value}, ART: $articleSymbol, CON: $conceptSymbol")
                 }
                 case Left(error) => {
                     val articleSymbol = error.articleDescr()
                     val conceptSymbol = error.conceptDescr()
                     val errorValue = error.description()
-                    println(s"Index: $index, ART: $articleSymbol, CON: $conceptSymbol, Error: $errorValue")
+                    println(s"Index: $index, CODE: ${error.article.value}, ART: $articleSymbol, CON: $conceptSymbol, Error: $errorValue")
                 }
             }
         })

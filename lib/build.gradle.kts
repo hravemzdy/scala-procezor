@@ -17,7 +17,7 @@ plugins {
 }
 
 group = "org.hravemzdy.procezor"
-version = "0.22.1"
+version = "0.22.17"
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -92,7 +92,7 @@ publishing {
             pom {
                 name.set("scala-procezor")
                 description.set("payroll-procezor Salary, Health, Social, Taxing Properties for years 2011-2022")
-                url.set("https://mzdyhrave.github.io/payrolldocs/")
+                url.set("https://hravemzdy.github.io")
                 properties.set(mapOf(
                     "procezor.year.min" to "2011",
                     "procezor.year.max" to "2022",
@@ -108,13 +108,13 @@ publishing {
                     developer {
                         id.set("ladislavlisy")
                         name.set("Ladislav Lisy")
-                        email.set("info@hravemzdy.org")
+                        email.set("greatwork@hravemzdy.org")
                     }
                 }
                 scm {
-                    connection.set("scm:git:git@github.com:mzdyhrave/payrollsc.git")
-                    developerConnection.set("scm:git:git@github.com:mzdyhrave/payrollsc.git")
-                    url.set("https://mzdyhrave.github.io/payrolldocs/")
+                    connection.set("scm:git:git@github.com:hravemzdy/scala-procezor.git")
+                    developerConnection.set("scm:git:git@github.com:hravemzdy/scala-procezor.git")
+                    url.set("https://hravemzdy.github.io")
                 }
             }
         }
